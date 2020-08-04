@@ -1,5 +1,7 @@
 package B1_TH5;
 
+import java.util.Scanner;
+
 public class HV extends HinhHoc {
     private float a;
     public HV(float dai, float rong){
@@ -7,6 +9,15 @@ public class HV extends HinhHoc {
         this.a=dai;
     }
 
+    public HV() {
+    }
+
+    @Override
+    public void in(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhập cạnh: ");
+        this.a = sc.nextInt();
+    }
 
     @Override
     public void out(){

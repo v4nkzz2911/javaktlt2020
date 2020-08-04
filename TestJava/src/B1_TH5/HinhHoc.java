@@ -15,18 +15,7 @@ public abstract class HinhHoc {
     }
 
 
-    public void in() {
-        Scanner sc = new Scanner(System.in);
-        while (true) {
-            System.out.println("Nhập chiều dài: ");
-            this.dai = sc.nextFloat();
-            System.out.println("Nhập chiều rộng: ");
-            this.rong = sc.nextFloat();
-            if (this.dai < this.rong) {
-                System.out.println("Sai rồi! Nhập lại đi!");
-            } else return;
-        }
-    }
+    public abstract void in();
 
     public abstract void out();
 
