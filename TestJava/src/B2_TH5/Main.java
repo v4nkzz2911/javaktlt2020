@@ -13,10 +13,16 @@ public class Main {
         System.out.println("6.Thoát");
         System.out.print("Lựa chọn: ");
     }
+    public static void subMenu(){
+        System.out.println("1.Tìm trong danh sách Giáo viên");
+        System.out.println("2.Tìm trong danh sách Nhân viên");
+        System.out.println("3.Thoát");
+        System.out.println("Lựa chọn: ");
+    }
 
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
-        int rep=0;
+        int rep=0,subrep=0;
         while (rep!=6){
             menu();
             rep = sc.nextInt();
@@ -29,6 +35,15 @@ public class Main {
                     break;
                 case 3 :
                     m.xuat();
+                    break;
+                case 4 :
+                    m.inSort();
+                    m.xuat();
+                    break;
+                case 5 :
+                    subMenu();
+                    subrep = sc.nextInt();
+                    m.search(subrep);
                     break;
             }
         }

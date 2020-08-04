@@ -11,6 +11,13 @@ public class NhanVien extends ConNguoi {
         super(name, birthday, sex, salary, rate, basesalary);
     }
 
+    public NhanVien(String name, String birthday, String sex, double salary, double rate, int basesalary, String room, String position, double benefit) {
+        super(name, birthday, sex, salary, rate, basesalary);
+        this.room = room;
+        this.position = position;
+        this.benefit = benefit;
+    }
+
     @Override
     public void inputInfo(){
         Scanner sc = new Scanner(System.in);
@@ -56,7 +63,6 @@ public class NhanVien extends ConNguoi {
 
     @Override
     public void outputInfo(){
-        System.out.println("Là nhân viên");
         super.outputInfo();
         System.out.println("Phòng: "+this.room);
         System.out.println("Chức vụ: "+this.position);

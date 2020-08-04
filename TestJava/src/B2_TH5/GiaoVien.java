@@ -9,6 +9,11 @@ public class GiaoVien extends ConNguoi {
         super(name, birthday, sex, salary, rate, basesalary);
     }
 
+    public GiaoVien(String name, String birthday, String sex, double salary, double rate, int basesalary, String mainstream) {
+        super(name, birthday, sex, salary, rate, basesalary);
+        this.mainstream = mainstream;
+    }
+
     @Override
     public void inputInfo(){
         super.inputInfo();
@@ -20,11 +25,11 @@ public class GiaoVien extends ConNguoi {
     @Override
     public void calcSalary(){
         this.salary = this.basesalary * this.rate;
+        this.salary = this.salary * 1.3;
     }
 
     @Override
     public void outputInfo(){
-        System.out.println("Là giáo viên");
         super.outputInfo();
         System.out.println("Chuyên ngành: "+this.mainstream);
 
